@@ -1,0 +1,9 @@
+CM001 – small machine, base model
+CM002 – small machine, premium model
+CM003 – small machine, deluxe model, water line compatible
+CM101 – large machine, base model
+CM102 – large machine, premium model, water line compatible
+CM103 – large machine, deluxe model, water line compatible
+EM001 – espresso machine, base model
+EM002 – espresso machine, premium model
+EM003 – espresso machine, deluxe model, water line compatible
