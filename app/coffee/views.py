@@ -21,6 +21,12 @@ def filter_machine():
     if request.method == 'POST':
         # get request json body to use as a raw filter for mongoengine
         raw_filter = request.get_json()
+        # check if the raw_filer is in proper format
+        for key, value in raw_filter.items():
+            if key not in dir(CoffeeMachine):
+                return make_response(
+                    jsonify({'message': 'use a valid property name'}))
+
         # use body to filter machine objects
         machines = CoffeeMachine.objects(__raw__=raw_filter)
         # make a list of machines codes
@@ -48,6 +54,11 @@ def filter_pod():
     if request.method == 'POST':
         # get request json body to use as a raw filter for mongoengine
         raw_filter = request.get_json()
+        # check if the raw_filer is in proper format
+        for key, value in raw_filter.items():
+            if key not in dir(CoffeePod):
+                return make_response(
+                    jsonify({'message': 'use a valid property name'}))
         # use body to filter pod objects
         pods = CoffeePod.objects(__raw__=raw_filter)
         # make a list of pods codes
