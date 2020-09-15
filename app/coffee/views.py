@@ -25,7 +25,7 @@ def filter_machine():
         for key, value in raw_filter.items():
             if key not in dir(CoffeeMachine):
                 return make_response(
-                    jsonify({'message': 'use a valid property name'}))
+                    jsonify({'message': 'use a valid property name'})), 404
 
         # use body to filter machine objects
         machines = CoffeeMachine.objects(__raw__=raw_filter)
@@ -58,7 +58,7 @@ def filter_pod():
         for key, value in raw_filter.items():
             if key not in dir(CoffeePod):
                 return make_response(
-                    jsonify({'message': 'use a valid property name'}))
+                    jsonify({'message': 'use a valid property name'})), 404
         # use body to filter pod objects
         pods = CoffeePod.objects(__raw__=raw_filter)
         # make a list of pods codes
