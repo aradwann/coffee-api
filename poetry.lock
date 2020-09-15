@@ -168,6 +168,18 @@ pymongo = ">=3.4,<4.0"
 
 [[package]]
 category = "dev"
+description = "Fake pymongo stub for testing simple MongoDB-dependent code"
+name = "mongomock"
+optional = false
+python-versions = "*"
+version = "3.20.0"
+
+[package.dependencies]
+sentinels = "*"
+six = "*"
+
+[[package]]
+category = "dev"
 description = "More routines for operating on iterables, beyond itertools"
 name = "more-itertools"
 optional = false
@@ -271,6 +283,14 @@ checkqa_mypy = ["mypy (0.780)"]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
 
 [[package]]
+category = "dev"
+description = "Various objects to denote special meanings in python"
+name = "sentinels"
+optional = false
+python-versions = "*"
+version = "1.0.0"
+
+[[package]]
 category = "main"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
@@ -315,7 +335,7 @@ ipaddress = ["ipaddress"]
 locale = ["Babel (>=1.3)"]
 
 [metadata]
-content-hash = "b29b424a754294009ee7638a7ea41765296864be5e8900cdf902a14998caf189"
+content-hash = "d259fe19c5a8421eee2ac7ca380424b60e70a6dd2ef3ad88bbff93afe484c50b"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -410,6 +430,10 @@ mongoengine = [
     {file = "mongoengine-0.20.0-py3-none-any.whl", hash = "sha256:6e127f45f71c2bc5e72461ec297a0c20f04c3ee0bf6dd869e336226e325db6ef"},
     {file = "mongoengine-0.20.0.tar.gz", hash = "sha256:db9e5d587e5d74e52851e0e4a53fd744725bfa9918ae6070139f5ba9c62c6edf"},
 ]
+mongomock = [
+    {file = "mongomock-3.20.0-py2.py3-none-any.whl", hash = "sha256:f9c60ba13cea86ce532cf39091191237eaaf5a6360371d43d3b1dc624cb559f1"},
+    {file = "mongomock-3.20.0.tar.gz", hash = "sha256:02f660a839a4623669fefc7168056a0a6e0c0f9d93b2b5eeaa52d17f3a642486"},
+]
 more-itertools = [
     {file = "more-itertools-8.5.0.tar.gz", hash = "sha256:6f83822ae94818eae2612063a5101a7311e68ae8002005b5e05f03fd74a86a20"},
     {file = "more_itertools-8.5.0-py3-none-any.whl", hash = "sha256:9b30f12df9393f0d28af9210ff8efe48d10c94f73e5daf886f10c4b0b0b4f03c"},
@@ -497,6 +521,9 @@ pyparsing = [
 pytest = [
     {file = "pytest-6.0.2-py3-none-any.whl", hash = "sha256:0e37f61339c4578776e090c3b8f6b16ce4db333889d65d0efb305243ec544b40"},
     {file = "pytest-6.0.2.tar.gz", hash = "sha256:c8f57c2a30983f469bf03e68cdfa74dc474ce56b8f280ddcb080dfd91df01043"},
+]
+sentinels = [
+    {file = "sentinels-1.0.0.tar.gz", hash = "sha256:7be0704d7fe1925e397e92d18669ace2f619c92b5d4eb21a89f31e026f9ff4b1"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
