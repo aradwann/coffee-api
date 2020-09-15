@@ -1,5 +1,6 @@
 import pytest
 from app import create_app
+from mongoengine import connect, disconnect
 
 
 @pytest.fixture()
@@ -14,9 +15,11 @@ def client():
     # Establish an application context before running the tests.
     ctx = flask_app.app_context()
     ctx.push()
-    # db.create_all()
+    # connect to a mongo mock db for testing
+    connect('mongoenginetest', host='mongomock://localhost', alias='testdb')
 
     yield client  # this is where the testing happens!
 
-    # db.drop_all()
+    # tear down the connection to mongo mock
+    disconnect()
     ctx.pop()
